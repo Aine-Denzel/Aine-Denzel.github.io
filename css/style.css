@@ -1,0 +1,1374 @@
+/* =====================================================
+   AINE DENZEL — PROFESSIONAL PORTFOLIO
+   HYBRID FUTURISTIC DESIGN
+===================================================== */
+
+:root {
+
+    --bg: #05070d;
+    --bg-secondary: #090d17;
+    --card: rgba(15, 22, 38, 0.72);
+
+    --text: #f4f7fb;
+    --muted: #929bad;
+
+    --cyan: #00eaff;
+    --purple: #8b5cf6;
+
+    --border: rgba(255,255,255,0.09);
+
+    --max-width: 1200px;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(0,234,255,0.08),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 10% 60%,
+            rgba(139,92,246,0.08),
+            transparent 25%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(5,7,13,0.78);
+
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.nav-container {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-family: "Orbitron", sans-serif;
+
+    font-weight: 700;
+
+    font-size: 1.05rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+.logo-symbol {
+
+    color: var(--cyan);
+
+    margin-right: 8px;
+
+}
+
+
+.logo span:last-child {
+
+    color: var(--cyan);
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+nav a {
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+
+    transition: 0.3s;
+
+    position: relative;
+
+}
+
+
+nav a:hover,
+nav a.active {
+
+    color: var(--cyan);
+
+}
+
+
+nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -9px;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--cyan);
+
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 1.6rem;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 150px 25px 80px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    position: relative;
+
+}
+
+
+.hero-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.18;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,234,255,0.08) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0,234,255,0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.eyebrow {
+
+    color: var(--cyan);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+}
+
+
+.status-dot {
+
+    display: inline-block;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--cyan);
+
+    box-shadow: 0 0 15px var(--cyan);
+
+    margin-right: 8px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px var(--cyan);
+
+}
+
+
+.hero h2 {
+
+    margin-top: 30px;
+
+    font-size: 1.1rem;
+
+    font-weight: 500;
+
+    color: #d7dce6;
+
+}
+
+
+.hero h2 span {
+
+    color: var(--cyan);
+
+    margin: 0 8px;
+
+}
+
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 23px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+
+.btn-primary {
+
+    color: #001014;
+
+    background: var(--cyan);
+
+    box-shadow: 0 0 30px rgba(0,234,255,0.2);
+
+}
+
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 45px rgba(0,234,255,0.45);
+
+}
+
+
+.btn-outline {
+
+    border: 1px solid var(--border);
+
+    background: rgba(255,255,255,0.03);
+
+}
+
+
+.btn-outline:hover {
+
+    border-color: var(--cyan);
+
+    color: var(--cyan);
+
+}
+
+
+.hero-signature {
+
+    margin-top: 40px;
+
+    color: var(--purple);
+
+    font-family: "Orbitron", sans-serif;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.hero-visual {
+
+    height: 550px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.profile-frame {
+
+    width: 310px;
+
+    height: 390px;
+
+    position: relative;
+
+    z-index: 3;
+
+    padding: 3px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--cyan),
+            transparent 45%,
+            var(--purple)
+        );
+
+    box-shadow:
+        0 0 60px rgba(0,234,255,0.12);
+
+}
+
+
+.profile-placeholder {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d1725,
+            #070b13
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--muted);
+
+}
+
+
+.profile-icon {
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 3rem;
+
+    background: rgba(0,234,255,0.06);
+
+    border: 1px solid rgba(0,234,255,0.2);
+
+    margin-bottom: 20px;
+
+}
+
+
+.profile-placeholder p {
+
+    font-family: "Orbitron", sans-serif;
+
+    color: var(--cyan);
+
+    letter-spacing: 3px;
+
+}
+
+
+.profile-placeholder small {
+
+    margin-top: 5px;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   ORBITS
+===================================================== */
+
+.orbit {
+
+    position: absolute;
+
+    border: 1px solid rgba(0,234,255,0.18);
+
+    border-radius: 50%;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.orbit-one {
+
+    width: 470px;
+    height: 180px;
+
+}
+
+
+.orbit-two {
+
+    width: 500px;
+    height: 240px;
+
+    transform: rotate(55deg);
+
+}
+
+
+.orbit-three {
+
+    width: 430px;
+    height: 500px;
+
+    transform: rotate(35deg);
+
+    border-color: rgba(139,92,246,0.15);
+
+}
+
+
+/* =====================================================
+   FLOATING CARDS
+===================================================== */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 5;
+
+    padding: 10px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: rgba(10,15,25,0.8);
+
+    backdrop-filter: blur(15px);
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1px;
+
+}
+
+
+.floating-card span {
+
+    color: var(--cyan);
+
+    margin-right: 7px;
+
+}
+
+
+.card-ai {
+
+    top: 65px;
+    right: 30px;
+
+}
+
+
+.card-code {
+
+    bottom: 80px;
+    left: 10px;
+
+}
+
+
+.card-data {
+
+    bottom: 35px;
+    right: 45px;
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 110px 25px;
+
+}
+
+
+.section-heading {
+
+    max-width: 720px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.section-label {
+
+    font-family: "Orbitron", sans-serif;
+
+    color: var(--cyan);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading h2,
+.cta h2 {
+
+    font-size: clamp(2.3rem,5vw,4rem);
+
+    line-height: 1.1;
+
+}
+
+
+.section-heading h2 span,
+.cta h2 span {
+
+    color: var(--cyan);
+
+}
+
+
+.section-heading > p:last-child {
+
+    margin-top: 20px;
+
+    color: var(--muted);
+
+}
+
+
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.feature-card {
+
+    padding: 35px;
+
+    min-height: 300px;
+
+    border: 1px solid var(--border);
+
+    background: var(--card);
+
+    border-radius: 15px;
+
+    transition: 0.35s;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.feature-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -80px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background: var(--cyan);
+
+    opacity: 0.06;
+
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(0,234,255,0.4);
+
+}
+
+
+.feature-icon {
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 2rem;
+
+    color: var(--cyan);
+
+    margin-bottom: 25px;
+
+}
+
+
+.feature-card h3 {
+
+    font-size: 1.25rem;
+
+    margin-bottom: 15px;
+
+}
+
+
+.feature-card p {
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+
+}
+
+
+.feature-card a {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: var(--cyan);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FEATURED PROJECT
+===================================================== */
+
+.featured-project {
+
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    padding: 70px 25px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.featured-content {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.featured-content h2 {
+
+    font-size: clamp(2.3rem,5vw,4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.featured-content h2 span {
+
+    display: block;
+
+    color: var(--cyan);
+
+}
+
+
+.featured-content p {
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+
+}
+
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 25px 0;
+
+}
+
+
+.tags span {
+
+    border: 1px solid rgba(0,234,255,0.2);
+
+    color: var(--cyan);
+
+    border-radius: 50px;
+
+    padding: 6px 12px;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 1px;
+
+}
+
+
+.text-link {
+
+    color: var(--cyan);
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   TERMINAL
+===================================================== */
+
+.terminal {
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background: #020409;
+
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+
+}
+
+
+.terminal-top {
+
+    padding: 12px;
+
+    background: #0b1019;
+
+    display: flex;
+
+    gap: 7px;
+
+}
+
+
+.terminal-top span {
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #555;
+
+}
+
+
+.terminal-body {
+
+    padding: 30px;
+
+    font-family: monospace;
+
+    font-size: 0.85rem;
+
+    line-height: 2.2;
+
+}
+
+
+.green {
+
+    color: #42ff9b;
+
+}
+
+
+.blue {
+
+    color: var(--cyan);
+
+}
+
+
+.cursor {
+
+    color: var(--cyan);
+
+    animation: blink 1s infinite;
+
+}
+
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================================
+   TECH STRIP
+===================================================== */
+
+.tech-strip {
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 55px;
+
+    padding: 28px;
+
+    color: #657084;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-box {
+
+    text-align: center;
+
+    padding: 80px 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,234,255,0.07),
+            transparent 60%
+        );
+
+}
+
+
+.cta-box p:not(.section-label) {
+
+    color: var(--muted);
+
+    margin: 20px auto 30px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    border-top: 1px solid var(--border);
+
+    background: #03050a;
+
+}
+
+
+.footer-content {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 50px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.footer-content p {
+
+    color: var(--muted);
+
+    margin-top: 15px;
+
+    font-size: 0.85rem;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--cyan);
+
+}
+
+
+.footer-bottom {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 20px 25px;
+
+    border-top: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #596273;
+
+    font-size: 0.75rem;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    nav {
+
+        gap: 15px;
+
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-signature {
+
+        text-align: center;
+
+    }
+
+
+    .hero-visual {
+
+        height: 500px;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .featured-content {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    nav {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        background: rgba(5,7,13,0.97);
+
+        border-bottom: 1px solid var(--border);
+
+    }
+
+
+    nav.open {
+
+        display: flex;
+
+    }
+
+
+    nav a.active::after {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        padding-top: 120px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(3.2rem,16vw,5rem);
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .hero h2 span {
+
+        display: none;
+
+    }
+
+
+    .hero-visual {
+
+        transform: scale(0.8);
+
+        margin-top: -30px;
+
+    }
+
+
+    .profile-frame {
+
+        width: 270px;
+        height: 350px;
+
+    }
+
+
+    .orbit-one,
+    .orbit-two,
+    .orbit-three {
+
+        transform: scale(0.8);
+
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
