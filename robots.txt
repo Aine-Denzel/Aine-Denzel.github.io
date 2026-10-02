@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aine-denzel.github.io/sitemap.xml
